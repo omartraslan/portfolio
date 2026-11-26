@@ -7,14 +7,14 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Public+Sans:wght@400;500;600&display=swap">
 <style>
 :root {
-  --bg: #F5F7F9;
+  --bg: #FAFAF6;
   --surface: #FFFFFF;
-  --ink: #17222D;
-  --muted: #526170;
-  --line: #D5DCE3;
-  --accent: #0B5C7A;
+  --ink: #132E2A;
+  --muted: #465D53;
+  --line: #CDD6CA;
+  --accent: #23533D;
   --on-accent: #FFFFFF;
-  --accent-soft: #E3F0F5;
+  --accent-soft: #E8EFDE;
   --amber: #8A5200;
   --amber-soft: #FFF3DC;
   color-scheme: light;
@@ -24,14 +24,14 @@
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #10181F; --surface: #17222B; --ink: #E6EDF2; --muted: #9FB0BD; --line: #2A3946;
-    --accent: #6CC0DD; --on-accent: #0B1A22; --accent-soft: #16323D; --amber: #F0B45A; --amber-soft: #33280F;
+    --bg: #102622; --surface: #193B34; --ink: #F2F6EB; --muted: #BBCDBD; --line: #496158;
+    --accent: #D2EE93; --on-accent: #102D29; --accent-soft: #26483B; --amber: #F0B45A; --amber-soft: #33280F;
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
-  --bg: #10181F; --surface: #17222B; --ink: #E6EDF2; --muted: #9FB0BD; --line: #2A3946;
-  --accent: #6CC0DD; --on-accent: #0B1A22; --accent-soft: #16323D; --amber: #F0B45A; --amber-soft: #33280F;
+  --bg: #102622; --surface: #193B34; --ink: #F2F6EB; --muted: #BBCDBD; --line: #496158;
+  --accent: #D2EE93; --on-accent: #102D29; --accent-soft: #26483B; --amber: #F0B45A; --amber-soft: #33280F;
   color-scheme: dark;
 }
 html { scroll-padding-top: calc(env(safe-area-inset-top, 0px) + 16px); }
@@ -171,6 +171,11 @@ footer { margin-top: 56px; color: var(--muted); font-size: 0.86rem; max-width: 7
   .view[hidden] { display: block !important; }
   .view { break-before: page; }
   a { color: inherit; }
+}
+@media screen {
+  .rail a[aria-current="page"] { text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 2px; text-underline-offset: 4px; }
+  .models, .pager { background: linear-gradient(120deg, var(--accent-soft), var(--bg)); }
+  .models { box-shadow: 0 0 0 1px var(--line); }
 }
 </style>
 </head>
