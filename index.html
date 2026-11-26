@@ -177,13 +177,43 @@ footer { margin-top: 56px; color: var(--muted); font-size: 0.86rem; max-width: 7
   .models, .pager { background: linear-gradient(120deg, var(--accent-soft), var(--bg)); }
   .models { box-shadow: 0 0 0 1px var(--line); }
 }
+
+/* Warm paper, editorial typography and the portfolio's metric-card motif. */
+:root,:root:not([data-theme="light"]),:root[data-theme="dark"] {color-scheme:light;--bg:#f7f8f4;--ink:#172b26;--surface:#fff;--muted:#43564c;--line:#cbd4c8;--accent:#23533d;--accent-soft:#dce7d7;--on-accent:white;--amber:#795012;--amber-soft:#fff1d6}
+.page,.mastbar{width:min(1180px,calc(100% - 40px));margin-inline:auto}
+.page{display:block;padding:clamp(40px,6vw,80px) 0 64px}
+.mast{border-bottom:1px solid var(--line)}
+.mastbar,.identity,.mastnav{display:flex;align-items:center}
+.mastbar{min-height:68px;justify-content:space-between;gap:14px}
+.identity,.mastnav{gap:clamp(8px,2vw,18px);font-weight:700}
+.mast a,.mast summary{color:var(--ink);text-decoration:none}
+.identity b{width:40px;height:40px;display:grid;place-items:center;border-radius:50%;background:#173a30;color:#dcf7af;font:bold italic 1.1rem Georgia,serif}
+.sections{position:relative}.sections summary{list-style:none;cursor:pointer}.sections summary::-webkit-details-marker{display:none}
+.sections summary:hover,.mast a:hover{text-decoration:underline}
+.sections .rail{position:absolute;z-index:5;inset:auto -2rem auto auto;top:calc(100% + 10px);width:min(18rem,85vw);background:white;border:1px solid var(--line);border-radius:8px;padding:18px;box-shadow:0 8px 24px #173a3017}
+.sections ul{display:grid;gap:8px}.location,.credentials{font:600 .88rem/1.65 ui-monospace,monospace;color:#46674f}
+.location{text-transform:uppercase;letter-spacing:.12em;margin-bottom:1.2rem}
+#h-home{font:normal clamp(3.7rem,8.3vw,7rem)/1 Georgia,serif;letter-spacing:-.065em}
+#h-home::after{content:".";color:#69953c}
+#view-home>.title{font-size:clamp(1.3rem,2.2vw,1.7rem);font-weight:700;letter-spacing:-.035em;margin:1.2rem 0 .65rem}
+#view-home>.lead{font-size:1.1rem;max-width:75ch;color:var(--muted);margin:.65rem 0 1rem}
+.credentials{margin:1rem 0 2.4rem;color:var(--muted);max-width:none}
+.portfolio-band{border-top:1px solid var(--line);padding-top:1.6rem;margin-bottom:2rem}
+.portfolio-band h2{font:normal 2.5rem Georgia,serif;letter-spacing:-.055em;margin:0 0 1rem}
+.metric-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.metric-card{display:flex;flex-direction:column;text-decoration:none;color:var(--ink);border:1px solid var(--line);border-radius:10px;overflow:hidden;background:white}
+.metric-card:hover .metric-link{text-decoration:underline}.metric-band{position:relative;padding:20px 24px;background:#dce7d7;flex:1}
+.metric-card:nth-child(2) .metric-band{background:#cddede}.metric-card:nth-child(3) .metric-band{background:#e7e4d4}
+.metric-band strong{font:normal 3.5rem/1.15 Georgia,serif;letter-spacing:-.06em}
+.metric-label,.metric-link{display:block}.metric-label{font-size:.96rem;line-height:1.4}.metric-link{padding:14px 24px;font-weight:600}
+.bars{position:absolute;right:14px;top:16px;display:flex;height:42px;align-items:end;gap:3px}.bars i{width:3px;background:#426c554a}
+@media(max-width:860px){.metric-row{grid-template-columns:repeat(3,minmax(15rem,1fr));overflow:auto;padding-bottom:8px}.bars{gap:2px}}
+@media(max-width:460px){.mastbar,.page{width:calc(100% - 28px)}.mastbar{font-size:.92rem}.identity b{width:32px;height:32px}.sections .rail{right:-4rem}}
 </style>
 </head>
 <body>
-<div class="page">
-
-  <aside class="rail">
-    <a class="who" href="#home">Omar Raslan</a>
+<header class="mast"><div class="mastbar"><a class="identity" href="#home"><b aria-hidden="true">OR</b> Omar Raslan</a><div class="mastnav"><details class="sections"><summary>Portfolio</summary><div class="rail">
+    
     <nav aria-label="Portfolio pages">
       <ul>
         <li><a href="#home" data-view="home">Home</a></li>
@@ -199,19 +229,25 @@ footer { margin-top: 56px; color: var(--muted); font-size: 0.86rem; max-width: 7
       <a href="mailto:omartraslan@gmail.com">omartraslan@gmail.com</a><br>
       <a href="https://www.linkedin.com/in/omartraslan">LinkedIn profile</a>
     </p>
-  </aside>
+  </div></details><a href="mailto:omartraslan@gmail.com">Email Omar</a></div></div></header>
+<div class="page">
+
+  
 
   <main>
 
 <!-- ============ HOME ============ -->
 <section class="view" id="view-home" aria-labelledby="h-home">
-  <p class="draft">Draft for review. Items marked “Needs input” are waiting for details.</p>
+  <p class="location">Toronto, Ontario</p>
   <h1 id="h-home">Omar Raslan</h1>
   <p class="title">Incident &amp; Problem Management Lead</p>
-  <p class="creds">PMP®, ITIL® 4 Strategist, ITIL® 4 CDS, CSSGB®. Toronto, ON.</p>
+  
   <p class="lead">Incident and problem management leader with 7+ years across Tier-1 banking, managed services and card issuing. I have commanded SEV0/P1 incidents on critical payments infrastructure, including peak processing windows, data center failover and a regional cloud outage, with executive and customer communications running in parallel. My focus is operational resilience: restore service fast, then remove the cause through problem management, automation and measured continuous improvement.</p>
+<p class="credentials">PMP®　/　ITIL® 4 Strategist　/　ITIL® 4 CDS　/　CSSGB®</p>
 
-  <h2>Three positions in payments</h2>
+  <section class="portfolio-band"><h2>Portfolio</h2><div class="metric-row"><a class="metric-card" href="#program"><div class="metric-band"><strong>39%</strong><span class="bars" aria-hidden="true"><i style="height:8px"></i><i style="height:10px"></i><i style="height:9px"></i><i style="height:13px"></i><i style="height:11px"></i><i style="height:18px"></i><i style="height:15px"></i><i style="height:20px"></i><i style="height:21px"></i><i style="height:19px"></i><i style="height:26px"></i><i style="height:24px"></i><i style="height:30px"></i><i style="height:34px"></i><i style="height:32px"></i><i style="height:38px"></i></span><span class="metric-label">reduction in MTTR</span></div><span class="metric-link">Building the program</span></a><a class="metric-card" href="#command"><div class="metric-band"><strong>12</strong><span class="bars" aria-hidden="true"><i style="height:8px"></i><i style="height:8px"></i><i style="height:9px"></i><i style="height:10px"></i><i style="height:11px"></i><i style="height:15px"></i><i style="height:21px"></i><i style="height:30px"></i><i style="height:42px"></i><i style="height:24px"></i><i style="height:17px"></i><i style="height:12px"></i><i style="height:11px"></i><i style="height:9px"></i><i style="height:8px"></i><i style="height:8px"></i></span><span class="metric-label">payroll hypercare bridges</span></div><span class="metric-link">Command at scale</span></a><a class="metric-card" href="#communication"><div class="metric-band"><strong>80%</strong><span class="bars" aria-hidden="true"><i style="height:11px"></i><i style="height:11px"></i><i style="height:22px"></i><i style="height:22px"></i><i style="height:11px"></i><i style="height:11px"></i><i style="height:22px"></i><i style="height:22px"></i><i style="height:11px"></i><i style="height:11px"></i><i style="height:22px"></i><i style="height:22px"></i><i style="height:11px"></i><i style="height:11px"></i><i style="height:22px"></i><i style="height:22px"></i></span><span class="metric-label">less ad-hoc communication during major outages</span></div><span class="metric-link">Communication as a measured system</span></a></div></section>
+<p class="draft">Draft for review. Items marked “Needs input” are waiting for details.</p>
+<h2>Three positions in payments</h2>
   <div class="models">
     <div>
       <h3>Managed service provider</h3>
@@ -655,6 +691,9 @@ footer { margin-top: 56px; color: var(--muted); font-size: 0.86rem; max-width: 7
     "leadership": "Leading without authority, Omar Raslan",
     "first-90-days": "First 90 days at Interac, Omar Raslan"
   };
+  document.querySelector(".sections").addEventListener("click", function (e) {
+    if (e.target.closest("a")) this.open = false;
+  });
   var first = true;
   function show() {
     var name = (location.hash || "").replace("#", "");
