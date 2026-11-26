@@ -5,3 +5,16 @@
   padding-bottom:.65rem;
 }
 .card{scroll-snap-align:start}.meter{min-height:110px}.inside{padding:20px}.hero h1{font-size:clamp(3.5rem,12vw,5rem)}nav{gap:1rem}.bar{gap:8px}.brand,nav a{font-size:.92rem}}
+
+header{background:#102d29;color:#f8fbf4}
+header a:hover{color:#d2ee93}
+.brand b{border:1px solid #849c84}
+.detail{max-width:800px;padding-block:2.5rem}
+.detail>h1{max-width:18ch}
+.toc{gap:.7rem 1.25rem}
+.field-label{font-weight:bold;margin-bottom:.15rem}
+.sample-note{margin-top:1.6rem;padding:clamp(1rem,4vw,2rem);border-left:4px solid #53865a;background:#e8efde}
+.sample-note h2{margin-top:0}
+.context{margin-top:2rem;border-block:1px solid #cbd4c8;padding:1rem 0}
+.context summary{cursor:pointer;font-weight:bold}
+.context[open] summary{margin-bottom:1rem}
