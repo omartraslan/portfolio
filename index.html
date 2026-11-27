@@ -219,6 +219,29 @@ h1,h2,h3 {font-family:Georgia,serif;letter-spacing:-.035em}
 .models > div:nth-child(2) {background:#cddede}
 .models > div:nth-child(3) {background:#e7e4d4}
 
+
+/* Colour accents for the supplied portfolio views. */
+@media screen {
+  :root { --forest:#23533d; --sage:#e2eddd; --teal:#225959; --sea:#deecea;
+    --ochre:#704d21; --sand:#f3ead5; --plum:#604965; --lilac:#eee5ef;
+    --clay:#784b38; --peach:#f5e6db; }
+  #view-communication, #view-advocacy {--accent:var(--teal);--accent-soft:var(--sea)}
+  #view-program, #view-first-90-days {--accent:var(--ochre);--accent-soft:var(--sand)}
+  #view-automation, #view-skills {--accent:var(--plum);--accent-soft:var(--lilac)}
+  #view-leadership, #view-certifications {--accent:var(--clay);--accent-soft:var(--peach)}
+  .kpi-row {gap:.5rem;border:0}
+  .kpi-row > div {padding:1rem;border:1px solid var(--line);border-radius:.6rem;background:var(--tint);--tint:var(--sage);--tone:var(--forest)}
+  .kpi-row > div:nth-child(5n + 2) {--tint:var(--sea);--tone:var(--teal)}
+  .kpi-row > div:nth-child(5n + 3) {--tint:var(--sand);--tone:var(--ochre)}
+  .kpi-row > div:nth-child(5n + 4) {--tint:var(--lilac);--tone:var(--plum)}
+  .kpi-row > div:nth-child(5n) {--tint:var(--peach);--tone:var(--clay)}
+  .kpi-row dt {color:var(--tone)}
+  .view thead th {background:var(--accent-soft);color:var(--ink)}
+  .view .callout, .view .inpractice {border-inline-start:3px solid var(--accent);background:var(--accent-soft)}
+  .view .stages > div:nth-child(1) {border-top-color:#719268}
+  .view .stages > div:nth-child(2) {border-top-color:#4e8984}
+  .view .stages > div:nth-child(3) {border-top-color:#a18150}
+}
 </style>
 </head>
 <body>
